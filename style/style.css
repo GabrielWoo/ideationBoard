@@ -1,0 +1,55 @@
+* {
+    font-size: 1em;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+svg {
+    background-color: #f0f0f0; /* Light grey background */
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.floating {
+    animation: float 3s ease-in-out infinite;
+}
+
+.legend {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background: #fff;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.legend-color {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #000;
+    margin-right: 10px;
+}
+
+.legend-text {
+    font-size: 14px;
+}
