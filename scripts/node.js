@@ -2,15 +2,23 @@
 const data = [
     { "name": "Build my own Portfolio site", "status": "done" },
     { "name": "Learn Angular.Js", "status": "notDone" },
-    { "name": "Get Certified", "status": "notDone" },
+    { "name": "Get Certified", "status": "inProgress" },
     { "name": "Build a wordle solver - using Python", "status": "notDone" },
-    { "name": "Build a Chatbot using LLM", "status": "notDone" },
+    { "name": "Read more on LLM", "status": "notDone" },
+    { "name": "Build a mobile application using Flutter", "status": "notDone" },
+];
+
+// Legends here:
+const legendItems = [
+    { color: "green", text: "Completed" },
+    { color: "orange", text: "In Progress" },
+    { color: "red", text: "Not Completed" },
 ];
 
 // Color mapping based on status
 const colorScale = d3.scaleOrdinal()
-    .domain(["done", "notDone"])
-    .range(["green", "red"]);
+    .domain(["done", "notDone", "inProgress"])
+    .range(["green", "red", "orange"]);
 
 // Select the SVG element
 const svg = d3.select("svg");
@@ -51,25 +59,19 @@ const labels = svg.selectAll("text")
 
 // Add legend to the SVG
 const legend = svg.append("g")
-    .attr("transform", `translate(${width - 150}, 20)`); // Position legend
-
-
-const legendItems = [
-    { color: "green", text: "Completed" },
-    { color: "red", text: "Not yet Completed" }
-];
+    .attr("transform", `translate(10, 0)`); // Adjust the x value as needed for left positioning
 
 legendItems.forEach((item, i) => {
     legend.append("rect")
-        .attr("x", 10)
-        .attr("y", 10 + i * 30)
+        .attr("x", 0)
+        .attr("y", i * 30)
         .attr("width", 20)
         .attr("height", 20)
         .attr("fill", item.color);
 
     legend.append("text")
-        .attr("x", 40)
-        .attr("y", 25 + i * 30)
+        .attr("x", 30) // Adjusted to place the text closer to the rectangles
+        .attr("y", 15 + i * 30) // Center the text vertically with the rectangles
         .attr("class", "label")
         .text(item.text);
 });
@@ -118,7 +120,7 @@ nodes
             .transition()
             .duration(200)
             .attr("r", radius * 1.5)
-            .style("fill", "orange");
+            .style("fill", "grey");
         svg.selectAll("text")
             .filter(td => td === d)
             .style("opacity", 1);
