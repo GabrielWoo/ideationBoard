@@ -4,8 +4,8 @@ const data = [
     { "name": "Learn Angular.Js", "status": "notDone" },
     { "name": "Get Certified", "status": "inProgress" },
     { "name": "Build a wordle solver - using Python", "status": "notDone" },
-    { "name": "Read more on LLM", "status": "notDone" },
-    { "name": "Build a mobile application using Flutter", "status": "notDone" },
+    { "name": "Build a simple chatbot using MongoDB", "status": "inProgress" },
+    { "name": "Build a mobile application using Flutter", "status": "inProgress" },
 ];
 
 // Legends here:
