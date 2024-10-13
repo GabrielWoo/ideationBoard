@@ -5,7 +5,7 @@ const data = [
     { "name": "Get Certified", "status": "inProgress" },
     { "name": "Build a wordle solver - using Python", "status": "notDone" },
     { "name": "Build a simple chatbot using MongoDB", "status": "inProgress" },
-    { "name": "Build a mobile application using Flutter", "status": "inProgress" },
+    { "name": "Build a mobile application using Flutter", "status": "done" },
 ];
 
 // Legends here:
