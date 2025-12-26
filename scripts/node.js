@@ -1,24 +1,44 @@
+// Constant values:
+
+const Status = {
+    Done: 'Done',
+    InProgress: 'InProgress',
+    NotDone: 'NotDone',
+};
+
+const StatusColors = {
+    Green: 'Green',
+    Orange: 'Orange',
+    Red: 'Red',
+};
+
 // Update data here
 const data = [
-    { "name": "Build my own Portfolio site", "status": "done" },
-    { "name": "Learn Angular.Js", "status": "inProgress" },
-    { "name": "Get Certified", "status": "inProgress" },
-    { "name": "Build a wordle solver - using Python", "status": "notDone" },
-    { "name": "Build a simple chatbot using MongoDB", "status": "inProgress" },
-    { "name": "Build a mobile application using Flutter", "status": "done" },
+    // Done here
+    { "name": "Build my own Portfolio site", "status": Status.Done.toString() },
+    { "name": "Build a mobile application using Flutter", "status": Status.Done.toString() },
+    // In Progress here
+    { "name": "Learn Angular.Js", "status": Status.InProgress.toString() },
+    { "name": "Get Certified", "status": Status.InProgress.toString() },
+
+    // Not Done here
+    { "name": "Build a wordle solver - using Python", "status": Status.NotDone.toString() },
+    { "name": "Build a simple chatbot using MongoDB", "status": Status.NotDone.toString() },
+
+
 ];
 
 // Legends here:
 const legendItems = [
-    { color: "green", text: "Completed" },
-    { color: "orange", text: "In Progress" },
-    { color: "red", text: "Not Completed" },
+    { color: StatusColors.Green.toString(), text: "Completed" },
+    { color: StatusColors.Orange.toString(), text: "In Progress" },
+    { color: StatusColors.Red.toString(), text: "Not Started" },
 ];
 
 // Color mapping based on status
 const colorScale = d3.scaleOrdinal()
-    .domain(["done", "notDone", "inProgress"])
-    .range(["green", "red", "orange"]);
+    .domain([Status.Done.toString(), Status.InProgress.toString(), Status.NotDone.toString()])
+    .range([StatusColors.Green.toString(), StatusColors.Orange.toString(), StatusColors.Red.toString()]);
 
 // Select the SVG element
 const svg = d3.select("svg");
