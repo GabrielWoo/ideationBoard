@@ -1,7 +1,7 @@
 // Update data here
 const data = [
     { "name": "Build my own Portfolio site", "status": "done" },
-    { "name": "Learn Angular.Js", "status": "notDone" },
+    { "name": "Learn Angular.Js", "status": "inProgress" },
     { "name": "Get Certified", "status": "inProgress" },
     { "name": "Build a wordle solver - using Python", "status": "notDone" },
     { "name": "Build a simple chatbot using MongoDB", "status": "inProgress" },
