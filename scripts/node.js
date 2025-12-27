@@ -17,12 +17,13 @@ const data = [
     // Done here
     { "name": "Build my own Portfolio site", "status": Status.Done.toString() },
     { "name": "Build a mobile application using Flutter", "status": Status.Done.toString() },
+    { "name": "Build a wordle solver", "status": Status.Done.toString() },
     // In Progress here
     { "name": "Learn Angular.Js", "status": Status.InProgress.toString() },
     { "name": "Get Certified", "status": Status.InProgress.toString() },
 
     // Not Done here
-    { "name": "Build a wordle solver - using Python", "status": Status.NotDone.toString() },
+
     { "name": "Build a simple chatbot using MongoDB", "status": Status.NotDone.toString() },
 
 
